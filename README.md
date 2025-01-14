@@ -2,17 +2,17 @@
 
 ---
 
-#### **1. Introduction**
+### **1. Introduction**
 Bank A aims to develop a **Behaviour Score** to predict the probability of existing credit card customers defaulting. This score will serve as a cornerstone for portfolio risk management. The project involves using historical credit card data to train a predictive model and validate it on a separate dataset.
 
 ---
 
-#### **2. Problem Statement**
+### **2. Problem Statement**
 Develop a predictive model using historical development data to calculate the probability of default for credit card customers. Apply the trained model to validation data to generate predictions.
 
 ---
 
-#### **3. Data Overview**
+### **3. Data Overview**
 The provided datasets include:
 1. **Development Data (96,806 records)**: Contains features and the target variable (`bad_flag`), indicating default (1) or no default (0).
 2. **Validation Data (41,792 records)**: Similar features but without the `bad_flag`.
@@ -25,7 +25,7 @@ Feature groups:
 
 ---
 
-#### **4. Data Preprocessing**
+### **4. Data Preprocessing**
 1. **Exploration**
    - Class imbalance in `bad_flag`: 1.42% defaulters (1,372 cases), 98.58% non-defaulters (95,434 cases).
    - Missing values analyzed; columns with >10% missing values were dropped.
@@ -48,13 +48,13 @@ Feature groups:
 
 ---
 
-#### **5. Model Development**
-##### **Baseline Model**
+### **5. Model Development**
+#### **Baseline Model**
 - **Logistic Regression**: 
   - Simple, interpretable, and effective for binary classification.
   - Metrics: Accuracy (98.3%), Precision (60.4%), Recall (52.1%), AUC-ROC (0.83).
 
-##### **Advanced Models**
+#### **Advanced Models**
 1. **Random Forest**
    - Metrics: AUC-ROC (0.87), Precision (62.8%), Recall (56.3%).
    - Strengths: Robust to overfitting, handles feature interactions.
@@ -68,8 +68,8 @@ Feature groups:
 
 ---
 
-#### **6. Model Evaluation**
-##### **Evaluation Metrics**
+### **6. Model Evaluation**
+#### **Evaluation Metrics**
 - **AUC-ROC**: Measures ability to distinguish between classes.
 - **Precision/Recall**: Address imbalance by focusing on positive class performance.
 - **F1-Score**: Balances precision and recall.
@@ -84,7 +84,7 @@ Feature groups:
 
 ---
 
-#### **7. Key Insights**
+### **7. Key Insights**
 1. **Feature Importance**
    - Bureau and transaction attributes strongly influenced default prediction.
    - Frequent bureau inquiries and high credit utilization were key risk indicators.
@@ -95,20 +95,20 @@ Feature groups:
 
 ---
 
-#### **8. Validation Predictions**
+### **8. Validation Predictions**
 - Applied the best model (MLP) to validation data.
 - Output: **`account_number`** and predicted probabilities.
 
 ---
 
-#### **9. Conclusion**
+### **9. Conclusion**
 1. Developed a robust Behaviour Score using an MLP model with AUC-ROC of 0.92.
 2. Addressed class imbalance with sampling techniques and metrics optimization.
 3. Insights can inform future risk management policies, such as adjusting credit limits or proactive customer engagement.
 
 ---
 
-#### **10. Recommendations**
+### **10. Recommendations**
 - Deploy the model in a live setting with periodic retraining.
 - Incorporate additional customer data (e.g., social or geographic trends) for better predictions.
 - Evaluate operational cost vs. benefit of interventions based on model outputs.
