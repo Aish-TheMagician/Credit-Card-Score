@@ -1,4 +1,4 @@
-### Report: Credit Card Behaviour Score Development
+# Credit Card Behaviour Score Development
 
 ---
 
