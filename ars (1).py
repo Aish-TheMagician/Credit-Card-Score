@@ -15,11 +15,6 @@ import seaborn as sns
 train_data = pd.read_csv('Dev_data_to_be_shared.csv')
 validation_data = pd.read_csv('validation_data_to_be_shared.csv')
 
-# # Explore schema
-# print("Train Data Shape:", train_data.shape)
-# print("Validation Data Shape:", validation_data.shape)
-# print("Train Data Columns:", train_data.columns.tolist())
-
 # Check data types
 print(train_data.dtypes.value_counts())
 print(train_data.info())
@@ -131,11 +126,6 @@ for i in range(len(correlation_matrix.columns)):
             col2 = correlation_matrix.columns[j]
             high_correlation_pairs.append((col1, col2, correlation_matrix.iloc[i, j]))
 
-# # Print the pairs of columns with high correlation
-# print("Columns with high correlation:")
-# for pair in high_correlation_pairs:
-#     print(f"{pair[0]} and {pair[1]}: {pair[2]}")
-
 # Identify columns to drop based on high correlation
 columns_to_drop = []
 for pair in high_correlation_pairs:
@@ -231,39 +221,6 @@ X, y = smote.fit_resample(X, y)
 
 # Split into training (70%) and testing (30%) subsets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
-
-# 2. Baseline Logistic Regression
-# Initialize the logistic regression model
-# log_reg = LogisticRegression(max_iter=1000, random_state=42)
-
-# # Train the model
-# log_reg.fit(X_train, y_train)
-
-# # Make predictions
-# y_pred = log_reg.predict(X_test)
-# y_pred_prob = log_reg.predict_proba(X_test)[:, 1]
-
-# # Evaluate the model
-# print("Classification Report:")
-# print(classification_report(y_test, y_pred))
-
-# print(f"ROC AUC Score: {roc_auc_score(y_test, y_pred_prob)}")
-
-# # Confusion matrix
-# conf_matrix = confusion_matrix(y_test, y_pred)
-# print("Confusion Matrix:")
-# print(conf_matrix)
-
-# # Plot the ROC Curve
-# fpr, tpr, thresholds = roc_curve(y_test, y_pred_prob)
-# plt.figure(figsize=(8, 6))
-# plt.plot(fpr, tpr, color='blue', label=f"ROC Curve (AUC = {roc_auc_score(y_test, y_pred_prob):.2f})")
-# plt.plot([0, 1], [0, 1], color='red', linestyle='--', label="Random Classifier")
-# plt.xlabel("False Positive Rate")
-# plt.ylabel("True Positive Rate")
-# plt.title("ROC Curve")
-# plt.legend()
-# plt.show()
 
 # Model Training and Tuning
 models = {
