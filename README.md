@@ -57,9 +57,13 @@ The dataset features fall into four categories:
 3. **Bureau Enquiry Attributes**: 50 features.
 4. **On-us Attributes**: 48 features.
 
+![Feature categories](images/attributes.png "Feature Categories")
+
 Key observation: The distribution of the target variable (`bad_flag`) is **highly imbalanced**, with:
 - **98.5%** non-defaulters.
 - **1.5%** defaulters.
+
+![Data Distribution](images/dataset.
 
 ---
 
