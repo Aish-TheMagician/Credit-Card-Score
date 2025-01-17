@@ -63,7 +63,7 @@ Key observation: The distribution of the target variable (`bad_flag`) is **highl
 - **98.5%** non-defaulters.
 - **1.5%** defaulters.
 
-![Data Distribution](images/dataset.
+![Data Distribution](images/dataset.png "Target value distribution")
 
 ---
 
@@ -77,6 +77,8 @@ Key observation: The distribution of the target variable (`bad_flag`) is **highl
 ---
 
 ## Methodology
+
+![Overview of Behaviour Score generation approach](images/Overview_of_Behaviour_Score_generation_approach.png "Overview")
 
 ### Data Preprocessing
 1. **Dropping Columns**: Removed features with >10% missing values (695 columns).
