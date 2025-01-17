@@ -59,6 +59,10 @@ The dataset features fall into four categories:
 
 ![Feature categories](images/attributes.png "Feature Categories")
 
+No significant correlation was seen among the feature groups.
+
+![Correlation](images/corr.png "Correaltion")
+
 Key observation: The distribution of the target variable (`bad_flag`) is **highly imbalanced**, with:
 - **98.5%** non-defaulters.
 - **1.5%** defaulters.
@@ -78,7 +82,7 @@ Key observation: The distribution of the target variable (`bad_flag`) is **highl
 
 ## Methodology
 
-![Overview of Behaviour Score generation approach](images/Overview_of_Behaviour_Score_generation_approach.png "Overview")
+![Overview](images/overview.png "Overview")
 
 ### Data Preprocessing
 1. **Dropping Columns**: Removed features with >10% missing values (695 columns).
@@ -95,6 +99,8 @@ Key observation: The distribution of the target variable (`bad_flag`) is **highl
 - Performed **dimensionality reduction** to address high dimensionality (1,264 features).
 - Retained the most important components by capturing maximum variance.
 - Enhanced computational efficiency while reducing noise.
+
+![PCA](images/pca.png "Cumulative Explaine Variance")
 
 ### Classification Models
 #### Random Forest Classifier
