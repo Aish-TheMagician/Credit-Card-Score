@@ -139,6 +139,8 @@ Key observation: The distribution of the target variable (`bad_flag`) is **highl
   - Accuracy: **99.52%**
   - F1 Score: **0.9952**
   - AUC-ROC: **0.9999**
+ 
+![Ensemble](images/ensemble.png "Ensemble")
 
 ---
 
